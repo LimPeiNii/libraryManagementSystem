@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="600.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.view.RootLayoutController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu text="_File">
+            <items>
+              <MenuItem onAction="#borrowBook" text="_Borrow Book" />
+                  <MenuItem onAction="#returnBook" text="_Return Book" />
+                  <MenuItem onAction="#updateDailyRecord" text="_Update Daily Record" />
+            </items>
+          </Menu>
+            <Menu text="_Edit">
+              <items>
+                  <Menu text="_Book List           ">
+                    <items>
+                      <MenuItem onAction="#addBook" text="A_dd New Book" />
+                      <MenuItem onAction="#editBook" text="Ed_it Book Details" />
+                        <MenuItem onAction="#deleteBook" text="De_lete Book " />
+                    </items>
+                  </Menu>
+              </items>
+            </Menu>
+          <Menu text="_View">
+            <items>
+              <MenuItem onAction="#viewBookList" text="_Book List" />
+                  <MenuItem onAction="#viewBorrowList" text="B_orrow List" />
+                  <MenuItem onAction="#viewDailyRecord" text="_Daily Record List" />
+            </items>
+          </Menu>
+            <Menu text="_Account">
+              <items>
+                <MenuItem onAction="#changePassword" text="_Change Password" />
+                  <MenuItem onAction="#logOut" text="_Log Out" />
+              </items>
+            </Menu>
+          <Menu text="_Help">
+            <items>
+              <MenuItem onAction="#viewGuidance" text="_Guidance              " />
+              <MenuItem onAction="#viewAbout" text="Ab_out              " />            
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

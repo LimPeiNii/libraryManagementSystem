@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.view.BookDetailsController">
+   <children>
+      <VBox layoutX="20.0" layoutY="20.0" spacing="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Book Details:" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="-10.0" />
+               </padding>
+            </Label>
+            <GridPane alignment="CENTER_LEFT" maxHeight="483.0" prefHeight="328.0" prefWidth="503.0" VBox.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.33331298828125" minWidth="10.0" prefWidth="227.33331298828125" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="434.66668701171875" minWidth="10.0" prefWidth="332.66668701171875" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="21.0" prefWidth="301.0" text="Book ID   " />
+                  <Label prefHeight="21.0" prefWidth="315.0" text="Book Title" GridPane.rowIndex="1" />
+                  <Label prefHeight="21.0" prefWidth="320.0" text="Date should be Returned" GridPane.rowIndex="7" />
+                  <Label prefHeight="21.0" prefWidth="330.0" text="Published Date" GridPane.rowIndex="5" />
+                  <Label prefHeight="21.0" prefWidth="400.0" text="Location" GridPane.rowIndex="4" />
+                  <Label prefHeight="21.0" prefWidth="369.0" text="Entry Date" GridPane.rowIndex="6" />
+                  <Label prefHeight="21.0" prefWidth="403.0" text="Status" GridPane.rowIndex="8" />
+                  <Label prefHeight="21.0" prefWidth="396.0" text="Author" GridPane.rowIndex="2" />
+                  <Label prefHeight="21.0" prefWidth="339.0" text="Language" GridPane.rowIndex="3" />
+                  <Label fx:id="bookIdLabel" text="Label" GridPane.columnIndex="1" />
+                  <Label fx:id="bookTitleLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="authorLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="dueDateLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Label fx:id="publishedDateLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label fx:id="languageLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="locationLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label fx:id="entryDateLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label fx:id="statusLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+               </children>
+               <padding>
+                  <Insets top="-20.0" />
+               </padding>
+            </GridPane>
+            <HBox VBox.vgrow="SOMETIMES">
+               <children>
+                  <RadioButton fx:id="personIdButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="106.0" selected="true" text="Person ID" HBox.hgrow="ALWAYS">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="ID" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="bookIdButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="89.0" text="Book ID" toggleGroup="$ID" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="idTextField" onKeyPressed="#selectPersonBook" prefHeight="32.0" prefWidth="346.0" promptText="E.g. s18081111 or BF000001H" HBox.hgrow="SOMETIMES">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.666666984558105" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

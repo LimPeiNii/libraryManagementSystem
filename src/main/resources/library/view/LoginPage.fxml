@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.view.LoginPageController">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" styleClass="background" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="126.0" layoutY="250.0" prefHeight="153.0" prefWidth="349.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="250.0">
+               <children>
+                  <Label style="-fx-font-size: 20;" text="Username: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="usernameTextField" />
+                  <Label style="-fx-font-size: 20;" text="Password: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordTextField" />
+                  <Label fx:id="newAccountLabel" onMouseClicked="#createAccount" style="-fx-text-fill: red;" text="Create New Account" textFill="#cc0303" underline="true">
+                     <font>
+                        <Font name="Microsoft Tai Le" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <HBox spacing="20.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <children>
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="78.0" text="Login" />
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" prefHeight="35.0" prefWidth="78.0" text="Cancel" />
+               </children>
+            </HBox>
+            <ImageView fx:id="imgView" fitHeight="161.0" fitWidth="386.0" layoutX="107.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="308.0" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="31.0" />
+            <Text fx:id="uniName" fill="#1a00eb" layoutX="122.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-family: &quot;Showcard Gothic&quot;;" textAlignment="CENTER" wrappingWidth="357.0559902191162" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

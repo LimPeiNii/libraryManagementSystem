@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.view.PersonBookSelectionController">
+   <children>
+      <HBox layoutX="20.0" layoutY="448.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <RadioButton fx:id="personIdButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="106.0" selected="true" text="Person ID" HBox.hgrow="ALWAYS">
+               <toggleGroup>
+                  <ToggleGroup fx:id="ID" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="bookIdButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="89.0" text="Book ID" toggleGroup="$ID" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="idTextField" onKeyPressed="#selectPersonBook" prefHeight="32.0" prefWidth="346.0" promptText="E.g. s18081111 or BF000001H" HBox.hgrow="SOMETIMES">
+               <font>
+                  <Font name="Comic Sans MS" size="14.666666984558105" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
